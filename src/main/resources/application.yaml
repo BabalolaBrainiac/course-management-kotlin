@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: course-management
+  message: Course management application api works perfectly, no profile has been set
+
+---
+spring:
+  config:
+    activate:
+      on-profile: development
+  message: Course management application api started using development profile
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+  message: Course management application api started using development profile
