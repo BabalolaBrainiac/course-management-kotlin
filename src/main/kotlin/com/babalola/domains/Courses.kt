@@ -9,7 +9,7 @@ data class Courses(
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
-    val id: Long? = null,
+    val id: Int? = null,
     val name: String,
     val category: String,
 )

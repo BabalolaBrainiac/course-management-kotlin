@@ -1,19 +1,32 @@
 spring:
   application:
     name: course-management
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: localhost
+    password: localhost
+  jpa:
+    database: h2
+    database-platform: org.hibernate.dialect.H2Dialect
+    generate-ddl: true
+    show-sql: true
+  h2:
+    console:
+      enabled: true
   message: Course management application api works perfectly, no profile has been set
 
 ---
-spring:
-  config:
-    activate:
-      on-profile: development
-  message: Course management application api started using development profile
-
-
----
-spring:
-  config:
-    activate:
-      on-profile: prod
-  message: Course management application api started using development profile
+#spring:
+#  config:
+#    activate:
+#      on-profile: development
+#  message: Course management application api started using development profile
+#
+#
+#---
+#spring:
+#  config:
+#    activate:
+#      on-profile: prod
+#  message: Course management application api started using development profile
